@@ -10,7 +10,7 @@ App to collect and sort one random tweet
 
 - We.js
 
-## How to install
+## How to install to development
 
 1. Clone this project
 2. Create one database for this project
@@ -19,7 +19,7 @@ App to collect and sort one random tweet
 4. Configure you database params
 5. install npm packages:
 ```sh
-npm install
+we i
 ```
 6. start with:
 ```sh
@@ -48,6 +48,17 @@ we test
 10. add views and one theme
 11. add build npm command: "build": "gulp build",
 
+## How to build for production
+
+```sh
+npm run build
+```
+
+And test with:
+
+```sh
+we go --prod
+```
 
 ## License
 
