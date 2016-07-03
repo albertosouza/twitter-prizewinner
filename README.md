@@ -34,7 +34,10 @@ See http://wejs.org for we.js documentation
 we test
 ```
 
-## Development:
+## Live development:
+
+<a href="https://www.youtube.com/watch?v=yysFzQs_t7w" target="_blank"><img src="http://img.youtube.com/vi/yysFzQs_t7w/0.jpg"
+alt="Screen cast in pt-br" width="240" height="180" border="10" /></a>
 
 1. generate the app with default settings
 2. create the resource: yo wejs:resource tweet text:string lang:string userName:string userDisplayName:string userImage:text imageUrl:text
