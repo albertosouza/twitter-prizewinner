@@ -10,12 +10,11 @@ module.exports = {
 
     var fns = [];
 
-
     fns.push(function registerUser1(done) {
       var user1 = {
         username: 'admin',
         email: 'admin@example.com',
-        password: '123', // change after install
+        password: process.env.START_ADMIN_PASSWORD || '123', // change after install
         displayName: 'Administrator',
         active: true,
         roles: ['administrator']
@@ -27,7 +26,7 @@ module.exports = {
         where: { email: user1.email },
         defaults: user1
       })
-      .spread(function (user, created) {
+      .spread(function (user) {
         we.log.info('New User with id: ', user.id);
         // install we-plugin-auth for use password
         if (!we.db.models.password) return done();
@@ -43,8 +42,6 @@ module.exports = {
       })
       .catch(done);
     });
-
-
 
     we.utils.async.series(fns, done);
   }
