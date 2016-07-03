@@ -15,16 +15,16 @@ describe('controllers.main', function () {
     it('should set res.locals.data', function (done) {
       var res = {
         locals: {},
-        ok: function ok() {
-          assert.equal(res.locals.data.page, 'home');
+        goTo: function goTo(location) {
+          assert.equal(location, '/tweet');
           done();
         }
       };
 
-      sinon.spy(res, 'ok');
+      sinon.spy(res, 'goTo');
       controller.index({ we: we }, res);
 
-      assert(res.ok.called);
+      assert(res.goTo.called);
     });
   });
 });

@@ -16,14 +16,13 @@ describe('mainRequest', function () {
       request(http)
       .get('/')
       .set('Accept', 'application/json')
-      .expect(200)
+      .expect(302)
       .end(function (err, res) {
         if (err) {
           console.log(res.text);
           throw new Error(err);
         }
-
-        assert(res.body.page, 'home');
+        assert.equal(res.headers.location, '/tweet');
         done();
       });
     });

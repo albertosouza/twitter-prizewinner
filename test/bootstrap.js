@@ -37,32 +37,18 @@ before(function(callback) {
 //after all tests
 after(function (callback) {
 
-  testTools.helpers.resetDatabase(we, function(err) {
-    if(err) return callback(err);
+  we.db.defaultConnection.close();
 
-    we.db.defaultConnection.close();
+  var tempFolders = [
+    path.resolve(process.cwd(), 'node_modules/we-plugin-post'),
+    projectPath + '/files/uploads'
+  ];
 
-    var tempFolders = [
-      path.resolve(process.cwd(), 'node_modules/we-plugin-post'),
-      projectPath + '/files/tmp',
-      projectPath + '/files/config',
-      projectPath + '/files/sqlite',
-
-      projectPath + '/files/public/min',
-
-      projectPath + '/files/public/tpls.hbs.js',
-      projectPath + '/files/public/admin.tpls.hbs.js',
-      projectPath + '/files/public/project.css',
-      projectPath + '/files/public/project.js',
-      projectPath + '/files/uploads',
-      projectPath + '/files/templatesCacheBuilds.js'
-    ];
-
-    async.each(tempFolders, function(folder, next){
-      deleteDir( folder, next);
-    }, function(err) {
-      if (err) throw new Error(err);
-      callback();
-    });
+  async.each(tempFolders, function(folder, next){
+    deleteDir( folder, next);
+  }, function(err) {
+    if (err) throw new Error(err);
+    callback();
   });
+
 })
