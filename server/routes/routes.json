@@ -1,0 +1,11 @@
+{
+  "get /": {
+    "controller": "main",
+    "action": "index"
+  },
+  "get /tweet/random": {
+    "controller": "tweet",
+    "action": "getOneRandom",
+    "model": "tweet"
+  }
+}

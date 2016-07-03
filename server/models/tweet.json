@@ -1,0 +1,30 @@
+{
+  "attributes": {
+    "text": {
+      "type": "STRING"
+    },
+    "lang": {
+      "type": "STRING"
+    },
+    "userName": {
+      "type": "STRING"
+    },
+    "userDisplayName": {
+      "type": "STRING"
+    },
+    "userImage": {
+      "type": "TEXT"
+    },
+    "imageUrl": {
+      "type": "TEXT"
+    }
+    
+  },
+  "associations": {
+    
+  },
+  "hooks": {
+    "afterCreate": []
+  }
+}
+

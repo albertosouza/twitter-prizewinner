@@ -1,0 +1,29 @@
+{
+  "roles": {
+    "administrator": {
+      "name": "administrator",
+      "permissions": []
+    },
+    "authenticated": {
+      "name": "authenticated",
+      "permissions": [
+        "find_tweet",
+        "edit_tweet",
+        "delete_tweet"
+      ],
+      "isSystemRole": true
+    },
+    "unAuthenticated": {
+      "name": "unAuthenticated",
+      "permissions": [
+        "find_tweet"
+      ],
+      "isSystemRole": true
+    },
+    "owner": {
+      "name": "owner",
+      "permissions": [],
+      "isSystemRole": true
+    }
+  }
+}
