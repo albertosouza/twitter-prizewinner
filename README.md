@@ -18,11 +18,11 @@ App to collect and sort one random tweet
 3. Copy config/local.example to config/local.js
 4. Configure you database params
 5. install npm packages:
-  ```sh
+  ```
   we i
   ```
 6. start with:
-  ```sh
+  ```
   we go
   ```
 
