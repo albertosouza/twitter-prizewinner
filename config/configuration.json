@@ -7,9 +7,7 @@
     "authenticated": {
       "name": "authenticated",
       "permissions": [
-        "find_tweet",
-        "edit_tweet",
-        "delete_tweet"
+        "find_tweet"
       ],
       "isSystemRole": true
     },
@@ -31,5 +29,8 @@
       "we-theme-cluster"
     ],
     "app": "we-theme-cluster"
+  },
+  "auth": {
+    "allowRegister": false
   }
 }
