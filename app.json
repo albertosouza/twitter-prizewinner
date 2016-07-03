@@ -21,7 +21,10 @@
       "value": "production",
       "required": true
     },
-
+    "START_ADMIN_PASSWORD": {
+      "description": "First admin password.",
+      "value": "123"
+    },
     "TWITTER_CONSUMER_KEY": {
       "description": "Twitter consumer key.",
       "value": "LM6ismHWspng1ag31sEHhMLMw",
