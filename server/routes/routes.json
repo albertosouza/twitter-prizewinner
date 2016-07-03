@@ -6,6 +6,7 @@
   "get /tweet/random": {
     "controller": "tweet",
     "action": "getOneRandom",
-    "model": "tweet"
+    "model": "tweet",
+    "template": "tweet/findOne"
   }
 }

@@ -4,6 +4,8 @@ Twitter Prizewinner app
 
 App to collect and sort one random tweet
 
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/albertosouza/twitter-prizewinner/tree/master)
+
 **Build With:**
 
 - We.js

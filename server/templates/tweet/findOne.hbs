@@ -1,0 +1,23 @@
+<a class="btn btn-default" href="https://twitter.com/{{data.userName}}" target="_blank">
+  <img src="{{data.userImage}}" alt="Imagem do {{data.userDisplayName}}">
+  {{data.userDisplayName}}
+</a>
+
+<a class="btn btn-default" href="/tweet">Ir para a lista</a>
+
+<table class="table table-striped table-hover">
+  <tbody>
+    {{#each data.dataValues }}
+      <tr>
+        <th>{{@key}}</th>
+        <td>{{this}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+  <tfoot>
+    <td colspan="2">
+      {{we-action-edit-btn resourceName data req data.id}}
+      {{we-action-delete-btn resourceName data req data.id}}
+    </td>
+  </tfoot>
+</table>

@@ -13,7 +13,7 @@ module.exports = function loadPlugin(projectPath, Plugin) {
 
   plugin.setConfigs({
     twitter: {
-      track: 'javascript'
+      track: 'nodeconfbr'
     },
     apiKeys: {
       twitter: {
@@ -45,7 +45,7 @@ module.exports = function loadPlugin(projectPath, Plugin) {
 
       we.db.models.tweet.create(data)
       .then(function (r) {
-        we.log.info('New tweet created:', r.id)
+        we.log.verbose('New tweet created:', r.id)
       })
       .catch(function (err) {
         we.log.error('Error on create tweet:', err)

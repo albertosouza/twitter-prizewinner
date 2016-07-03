@@ -4,10 +4,6 @@
 
 module.exports = {
   index: function index(req, res) {
-    res.locals.data = {
-      page: 'home'
-    };
-
-    res.ok();
+    res.goTo('/tweet')
   }
 };

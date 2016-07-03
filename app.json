@@ -1,0 +1,49 @@
+{
+  "name": "twitter-prizewinner",
+  "description": "App to collect and sort one random tweet",
+  "repository": "https://github.com/albertosouza/twitter-prizewinner",
+  "logo": "https://wejs.org/public/plugin/we-core/files/images/logo.png",
+  "keywords": ["nodejs", "we.js"],
+  "image": "heroku/nodejs",
+  "env": {
+    "APP_NAME": {
+      "description": "The project app name or blog title.",
+      "value": "twitter-prizewinner",
+      "required": true
+    },
+    "APP_DESCRIPTION": {
+      "description": "Project description",
+      "value": "App to collect and sort one random tweet",
+      "required": true
+    },
+    "NODE_ENV": {
+      "description": "The node.js enviroment, keep production.",
+      "value": "production",
+      "required": true
+    },
+
+    "TWITTER_CONSUMER_KEY": {
+      "description": "Twitter consumer key.",
+      "value": "LM6ismHWspng1ag31sEHhMLMw",
+      "required": true
+    },
+    "TWITTER_CONSUMER_SECRET": {
+      "description": "Twitter consumer key.",
+      "value": "zzsORt1zWkoNDYYVFGgKiXGPLlGHQ0oOmQyI7p1Iagc6lDQFMN",
+      "required": true
+    },
+    "TWITTER_ACCESS_TOKEN_KEY": {
+      "description": "Access token key.",
+      "value": "2956313212-3QfdpghFLwUGunMi3to8sN9MCNnZ0xhg0nD5LoI",
+      "required": true
+    },
+    "TWITTER_ACCESS_TOKEN_SECRET": {
+      "description": "Access token secret.",
+      "value": "HkDTcAmVuYTxyrMFjFfWNAncsiFmc0bOEW7eDEVtshIY9",
+      "required": true
+    }
+  },
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ]
+}

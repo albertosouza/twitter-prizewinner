@@ -25,5 +25,11 @@
       "permissions": [],
       "isSystemRole": true
     }
+  },
+  "themes": {
+    "enabled": [
+      "we-theme-cluster"
+    ],
+    "app": "we-theme-cluster"
   }
 }
