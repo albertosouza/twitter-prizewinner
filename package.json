@@ -9,6 +9,7 @@
     "verbose": "node app.js --prod",
     "prod": "node app.js --prod",
     "start": "node app.js",
+    "build": "gulp build",
     "test": "NODE_ENV=test LOG_LV=info ./node_modules/.bin/mocha test/bootstrap.js test/**/*.test.js",
     "coverage": "NODE_ENV=test LOG_LV=info node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- -u exports -R spec test/bootstrap.js test/**/*.test.js"
   },
