@@ -6,7 +6,9 @@
  * @return {Object}             intance of we.js Plugin class
  */
 
-var Twitter = require('twitter');
+var Twitter = require('twitter')
+var express = require('express')
+var path = require('path')
 
 module.exports = function loadPlugin(projectPath, Plugin) {
   var plugin = new Plugin(__dirname);
@@ -55,7 +57,25 @@ module.exports = function loadPlugin(projectPath, Plugin) {
     stream.on('error', function (error) {
       we.log.error('Erro on get tweet:', error);
     })
-  });
+  })
 
-  return plugin;
+  /**
+   * Middleware for serve static client pages
+   *
+   * @param  {Object} we we.js app
+   */
+  plugin.bindClientAppFolder = function bindClientAppFolder(we) {
+
+    plugin.clientAppMD = express.static(path.join( we.projectPath, 'client/dist'))
+
+    we.express.use(function (req, res, next) {
+      if (!req.accepts('html')) return next()
+
+      plugin.clientAppMD(req, res, next)
+    })
+  }
+
+  plugin.events.on('we:after:load:express', plugin.bindClientAppFolder)
+
+  return plugin
 };
