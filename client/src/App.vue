@@ -14,7 +14,6 @@
 </template>
 
 <script>
-import Hello from './components/Hello';
 import Tweet from './components/Tweet';
 import RaffleTweet from './components/RaffleTweet';
 
