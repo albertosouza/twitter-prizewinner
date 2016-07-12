@@ -19,6 +19,7 @@
 </template>
 
 <script>
+import config from '../configuration';
 import Tweet from './Tweet';
 
 export default {
@@ -42,7 +43,7 @@ export default {
       }, 5000);
     },
     getWinnerFromServer: function getWinnerFromServer() {
-      const apiURL = 'http://localhost:4000/tweet/random';
+      const apiURL = `${config.apiHost}/tweet/random`;
       const xhr = new XMLHttpRequest();
       const self = this;
       xhr.open('GET', apiURL);

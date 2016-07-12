@@ -14,6 +14,7 @@
 </template>
 
 <script>
+import config from './configuration';
 import Tweet from './components/Tweet';
 import RaffleTweet from './components/RaffleTweet';
 
@@ -28,19 +29,49 @@ export default {
   },
   methods: {
     fetchData: function fetchData() {
-      const apiURL = 'http://localhost:4000/tweet';
+      const apiURL = `${config.apiHost}/tweet`;
       const xhr = new XMLHttpRequest();
       const self = this;
       xhr.open('GET', apiURL);
       xhr.setRequestHeader('Accept', 'application/json');
       xhr.onload = function onload() {
         self.tweets = JSON.parse(xhr.responseText).tweet;
+
+        self.getNewTweets();
       };
       xhr.send();
     },
+
+    getNewTweets: function getNewTweets() {
+      setTimeout(() => {
+        let apiURL = `${config.apiHost}/tweet?since=`;
+        apiURL += new Date().toISOString();
+        const xhr = new XMLHttpRequest();
+        const self = this;
+        xhr.open('GET', apiURL);
+        xhr.setRequestHeader('Accept', 'application/json');
+        xhr.onload = function onload() {
+          let newTweets;
+
+          try {
+            newTweets = JSON.parse(xhr.responseText).tweet;
+          } catch (e) {
+            // err on parse
+          }
+
+          if (newTweets) {
+            for (let i = 0; i < newTweets.length; i++) {
+              self.tweets.unshift(newTweets[i]);
+            }
+          }
+
+          self.getNewTweets();
+        };
+        xhr.send();
+      }, 3000);
+    },
   },
   components: {
-    Hello,
     Tweet,
     RaffleTweet,
   },
