@@ -15,7 +15,7 @@ module.exports = function loadPlugin(projectPath, Plugin) {
 
   plugin.setConfigs({
     twitter: {
-      track: 'nodeconfbr'
+      track: process.env.TWITTER_TAG || 'nodejs'
     },
     apiKeys: {
       twitter: {

@@ -6,6 +6,12 @@
   "keywords": ["nodejs", "we.js"],
   "image": "heroku/nodejs",
   "env": {
+    "TWITTER_TAG": {
+      "description": "Twitter tag to collect.",
+      "value": "nodejs",
+      "required": true
+    },
+
     "APP_NAME": {
       "description": "The project app name or blog title.",
       "value": "twitter-prizewinner",
