@@ -12,7 +12,7 @@
     </div>
 
     <div v-else>
-      <button v-on:click="getWinner" class="raffle-btn button red">Get winner</button>
+      <button @click="getWinner" class="raffle-btn button red">Get winner</button>
     </div>
 
   </div>

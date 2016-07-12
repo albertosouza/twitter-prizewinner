@@ -2,7 +2,7 @@
   <div v-if="tweet.text" class='tweet'>
     <div class='tweet-user'>
       <div class="user-image-area">
-        <img class="user-image" v-bind:src="tweet.userImage" />
+        <img class="user-image" :src="tweet.userImage" />
       </div>
 
       <div class="tweet-text-names-area">
@@ -14,7 +14,7 @@
         </div>
 
         <div class="tweet-text">{{tweet.text}}</div>
-        <img class="tweet-image" v-bind:src="tweet.imageUrl" />
+        <img class="tweet-image" :src="tweet.imageUrl" />
 
       </div>
     </div>
