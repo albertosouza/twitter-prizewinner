@@ -8,7 +8,7 @@
     "dev": "node app.js --dev && ",
     "verbose": "node app.js --prod",
     "prod": "node app.js --prod",
-    "start": "node app.js",
+    "start": "node app.js --dev",
     "build": "cd client && npm run build",
     "test": "NODE_ENV=test LOG_LV=info ./node_modules/.bin/mocha test/bootstrap.js test/**/*.test.js",
     "coverage": "NODE_ENV=test LOG_LV=info node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- -u exports -R spec test/bootstrap.js test/**/*.test.js"
