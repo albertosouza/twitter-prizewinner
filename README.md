@@ -2,15 +2,18 @@
 
 Twitter Prizewinner app
 
-App to collect and sort one random tweet
+App to collect and raffle one random tweet
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/albertosouza/twitter-prizewinner/tree/master)
 
 **Build With:**
 
 - We.js
+- Vue.js
 
 ## How to install to development
+
+Fist install and start the client side avaible in client folder, see client/README.md
 
 1. Clone this project
 2. Create one database for this project
@@ -50,6 +53,16 @@ alt="Screen cast in pt-br" width="240" height="180" border="10" /></a>
 9. add deploy to heroku configuration
 10. add views and one theme
 11. add build npm command: "build": "gulp build",
+
+UPDATE to add vue.js:
+
+1. install vue cli
+2. generate one vue app inside client folder
+3. add client app static middleware to client/app
+4. develop the client
+5. build the client
+6. remove uneed we.js plugins
+
 
 ## How to build for production
 
